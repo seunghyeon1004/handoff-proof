@@ -1,0 +1,96 @@
+[
+  {
+    "case": "report_ok",
+    "model": "qwen2.5:14b via local Ollama",
+    "entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      },
+      {
+        "path": "report.py",
+        "line": 8,
+        "text": "def make_html(data: Path, config_path: Path, template_path: Path) -> str:"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "240d3a0d667992bc0db4e45d0c426946ef491427903bc0375f700b5e99a96379",
+    "reviewed_source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "84cde6608f589ad4c856e9caad829031a4ac0a6f10b32a98918f1d201d810871",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "status": "passed",
+    "returncode": 0,
+    "output_total_krw": 2500,
+    "final_bundle_reproduced": true,
+    "output_html": "<html><h1>October synthetic spending</h1><ul><li>Groceries: 1200 KRW</li><li>Transport: 800 KRW</li><li>Books: 500 KRW</li></ul><p>Total: 2500 KRW</p></html>\n",
+    "analysis_seconds": 203.05,
+    "verification_seconds": 1.51
+  },
+  {
+    "case": "report_calc_bug",
+    "model": "qwen2.5:14b via local Ollama",
+    "entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "a3ef724e1ff398ca53622c52014a4bf699245dd694722862a2c95cf953642a07",
+    "reviewed_source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "84cde6608f589ad4c856e9caad829031a4ac0a6f10b32a98918f1d201d810871",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "3248dc9782931260d3413d01ecc259aba74a66cbba45cc401518ed9d927a7b6a",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": "276e9ebe388c32e14501dbb79c174a348a53ca90386eab6f7bbd9837e06d6082",
+    "status": "failed",
+    "returncode": 0,
+    "output_total_krw": 2501,
+    "final_bundle_reproduced": true,
+    "output_html": "<html><h1>October synthetic spending</h1><ul><li>Groceries: 1200 KRW</li><li>Transport: 800 KRW</li><li>Books: 500 KRW</li></ul><p>Total: 2501 KRW</p></html>\n",
+    "analysis_seconds": 110.7,
+    "verification_seconds": 1.52
+  }
+]

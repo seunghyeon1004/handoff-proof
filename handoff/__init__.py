@@ -1,0 +1,1 @@
+"""Local Python handoff prototype."""

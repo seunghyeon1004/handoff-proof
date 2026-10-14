@@ -1,0 +1,316 @@
+[
+  {
+    "case": "report_ok",
+    "classification": "synthetic sample",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "25c7880d22ff21836ae44b11aee6818806550f0d6d371b05abcecf76c58013d3",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "84cde6608f589ad4c856e9caad829031a4ac0a6f10b32a98918f1d201d810871",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": null,
+    "status": "passed",
+    "returncode": 0,
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_missing",
+    "classification": "synthetic sample",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      },
+      {
+        "path": "main.py",
+        "line": 22,
+        "text": "main()"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "4f1d6bacd5a8072f8b9ef62ac56ff368de766820c036c01d41b1f51930ed4170",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": 2,
+    "status": "failed",
+    "returncode": 1,
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": null,
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_config_bad",
+    "classification": "synthetic sample",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "a4d5d9d40b219db0ad3f600c0634812c62cea3ee32d3a9d463767caebd726f65",
+    "source_sha256": {
+      "config.json": "35fb661cd7f6efcf7ddce0167aab99c4a70370201d155d8790657a50ae7cd42a",
+      "data.csv": "84cde6608f589ad4c856e9caad829031a4ac0a6f10b32a98918f1d201d810871",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": null,
+    "status": "failed",
+    "returncode": 1,
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": null,
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_wrong_total",
+    "classification": "input/expectation mismatch",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "b680dc2a88b0ef59b772e8263f9cfc4c8d3f04dff9ed575ce9e97c484b732092",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "4e389a22d2752d715a7a49c2e44fe659f9118c648c82d5a84d6cb7dcd0b89a9d",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": null,
+    "status": "failed",
+    "returncode": 0,
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": "158677098f9955cdac2af08dbc6e9659360e984c2a0ee6b295906b5f526a223b",
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_calc_bug",
+    "classification": "calculation defect",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "1a91fa1e79799c0ea15bb74bad6651ac590e60137ea97f758b6f443350ca4841",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "84cde6608f589ad4c856e9caad829031a4ac0a6f10b32a98918f1d201d810871",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "3248dc9782931260d3413d01ecc259aba74a66cbba45cc401518ed9d927a7b6a",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": 1,
+    "status": "failed",
+    "returncode": 0,
+    "approved_artifact_sha256": "1348a60f88a9cbeda949ab477ad832d69058e97b01473ae1fe0c033a9b0548dc",
+    "actual_artifact_sha256": "276e9ebe388c32e14501dbb79c174a348a53ca90386eab6f7bbd9837e06d6082",
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_reordered",
+    "classification": "synthetic sample",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "94268d8b96188b09f7c61c6f9a8856e2fdd8831d8dbadf6aa0deeea5f29b8c31",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "f1a2a61faaa7b76b03c8320a296e256fcbe87fcc23ca76fca64a8c052402628d",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": null,
+    "status": "passed",
+    "returncode": 0,
+    "approved_artifact_sha256": "07d135d062e9bf865fdceecb3ec972bdb1a2a54c608b3eb98408af5ccc75a2a8",
+    "actual_artifact_sha256": "07d135d062e9bf865fdceecb3ec972bdb1a2a54c608b3eb98408af5ccc75a2a8",
+    "final_bundle_reproduced": true
+  },
+  {
+    "case": "report_added",
+    "classification": "synthetic sample",
+    "model": "qwen2.5:14b via local Ollama",
+    "model_entry": "main.py",
+    "cited_source_lines": [
+      {
+        "path": "main.py",
+        "line": 7,
+        "text": "def main():"
+      },
+      {
+        "path": "main.py",
+        "line": 21,
+        "text": "if __name__ == '__main__':"
+      }
+    ],
+    "reviewed_command": [
+      "python",
+      "-B",
+      "main.py",
+      "--input",
+      "data.csv",
+      "--config",
+      "config.json",
+      "--template",
+      "template.html",
+      "--output",
+      "../../generated/report.html"
+    ],
+    "plan_fingerprint": "037309ae75e164c46d90b54412b7946b164d036b852e87e5e6b82e42ad604daf",
+    "source_sha256": {
+      "config.json": "4a552cfcc5cfac37fea3791a883bfb17c7adbc224a35ebd33429109032ce5929",
+      "data.csv": "f8fdbd06c4ee70abdba1a7a6bec36e87a4e91690f1298b8f1c4de1b37acf790f",
+      "main.py": "8a654dc917b3beb1d538ca4df2fe86f08a72a799ae4fc6faad57a806d7d55444",
+      "report.py": "e10adfe4b0b3a952a786c93b46010341c67ac012242f28613e7330e140f80f6b",
+      "template.html": "ce8713e116d5f51204826f05e44b4c2a9d99b74919c4fb1c5d12f1d92f0aaebf"
+    },
+    "analysis_attempts": null,
+    "status": "passed",
+    "returncode": 0,
+    "approved_artifact_sha256": "44624cd7f99256a9fac818486fd19bdc9e6b64465aa0ba1e32dc61b089aeb311",
+    "actual_artifact_sha256": "44624cd7f99256a9fac818486fd19bdc9e6b64465aa0ba1e32dc61b089aeb311",
+    "final_bundle_reproduced": true
+  }
+]
